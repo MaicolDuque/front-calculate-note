@@ -35,6 +35,7 @@ function App() {
           setClassAlert('alert-danger')
         } else {
           setClassAlert('alert-success')
+          setNotes([])
         }
         setMessage(res.message)
       })
@@ -55,7 +56,7 @@ function App() {
             <div className="">
               <form>
                 <div className="form-group">
-                  <label htmlFor="validation01">Nombre</label>
+                  <label htmlFor="validation01">Nombre curso</label>
                   <input type="text" className="form-control" value={name}
                     onChange={({ target }) => setName(target.value)} placeholder="Nombre " required />
                 </div>
