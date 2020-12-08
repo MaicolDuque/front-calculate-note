@@ -24,7 +24,7 @@ function App() {
   const calculate = (e) => {
     e.preventDefault()
     const info = { name, notes }
-    fetch('http://localhost:8080/api/calculate', {
+    fetch(process.env.REACT_APP_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(info)
